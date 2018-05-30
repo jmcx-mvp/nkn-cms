@@ -79,6 +79,7 @@ class NewsController extends Controller
             $grid->id('ID')->sortable();
 
             $grid->column('title', '标题')->editable();
+            $grid->column('focus_img_url', '展示图')->image('', 300, 100);
             $grid->column('summary', '摘要');
             $grid->column('status', '状态')->editable('select', [
                 '1' => '启用',
@@ -106,6 +107,7 @@ class NewsController extends Controller
             $form->display('id', 'ID');
 
             $form->text('title', '标题');
+            $form->image('focus_img_url', '展示图');
             $form->textarea('summary', '摘要');
             $form->editor('content', '内容');
             $form->select('status', '状态')->options([

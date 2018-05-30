@@ -17,14 +17,12 @@ class EmailsController extends Controller
     public function index()
     {
         $data = Emails::all();
+        $str = '';
+        foreach ($data as $item) {
+            $str .= $item['address'] . '; ';
+        }
 
-        $retData = [
-            'code' => 1000,
-            'info' => 'success',
-            'data' => $data
-        ];
-
-        return response()->json($retData);
+        return response()->json($str);
     }
 
     /**

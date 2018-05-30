@@ -13,4 +13,5 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
     $router->resource('news', NewsController::class);
+    $router->resource('email', EmailController::class);
 });

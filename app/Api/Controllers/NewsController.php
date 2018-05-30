@@ -14,7 +14,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $data = News::where('status', '启用')->orderBy('id', 'desc')->paginate(10);
+        $data = News::where('status', '1')->orderBy('id', 'desc')->paginate(10);
 
         $retData = [
             'code' => 1000,
