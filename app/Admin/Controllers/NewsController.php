@@ -72,13 +72,18 @@ class NewsController extends Controller
     protected function grid()
     {
         return Admin::grid(News::class, function (Grid $grid) {
+            $grid->disableRowSelector();
+            $grid->disableFilter();
+            $grid->disableExport();
 
             $grid->id('ID')->sortable();
 
-            $grid->column('title', '标题');
+            $grid->column('title', '标题')->editable();
             $grid->column('summary', '摘要');
-//            $grid->column('author', '作者');
-            $grid->column('status', '状态');
+            $grid->column('status', '状态')->editable('select', [
+                '1' => '启用',
+                '0' => '禁用'
+            ]);
 
             $grid->created_at();
             $grid->updated_at();
@@ -104,11 +109,9 @@ class NewsController extends Controller
             $form->textarea('summary', '摘要');
             $form->editor('content', '内容');
             $form->select('status', '状态')->options([
-                '启用' => '启用',
-                '停用' => '停用'
-            ])->default('启用');
-
-//            $form->display('author', '作者')->default(Admin::user()->username);
+                '1' => '启用',
+                '0' => '停用'
+            ])->default('1');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

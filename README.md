@@ -21,6 +21,7 @@ $ npm install
 $ cp .env.example .env
 $ php artisan key:generate 
 
+$ php artisan admin:install
 $ php artisan migrate:install
 $ php artisan migrate
 
