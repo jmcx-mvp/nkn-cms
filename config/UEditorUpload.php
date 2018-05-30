@@ -45,7 +45,7 @@ return [
         "imageCompressEnable" => true, /* 是否压缩图片,默认是true */
         "imageCompressBorder" => 1600, /* 图片压缩最长边限制 */
         "imageInsertAlign" => "none", /* 插入的图片浮动方式 */
-        "imageUrlPrefix" => "", /* 图片访问路径前缀 */
+        "imageUrlPrefix" => env('APP_URL'), /* 图片访问路径前缀 */
         "imagePathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 为了保证跨域名使用api，这里提供绝对地址 */
         //"imagePathFormat" => "/uploads/ue/images//{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
         /* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
@@ -110,7 +110,7 @@ return [
 
         /* 列出指定目录下的图片 */
         "imageManagerActionName" => "listimage", /* 执行图片管理的action名称 */
-        "imageManagerListPath" => "/uploads/ue/images//", /* 指定要列出图片的目录 */
+        "imageManagerListPath" => "/uploads/ue/images/", /* 指定要列出图片的目录 */
         "imageManagerListSize" => 20, /* 每次列出文件数量 */
         "imageManagerUrlPrefix" => "", /* 图片访问路径前缀 */
         "imageManagerInsertAlign" => "none", /* 插入的图片浮动方式 */

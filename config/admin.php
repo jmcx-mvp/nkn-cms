@@ -71,8 +71,8 @@ return [
         'disk' => 'admin',
 
         'directory'  => [
-            'image'  => 'images',
-            'file'   => 'files',
+            'image'  => env('MY_API_HTTP_HEAD') . 'uploads/ue/images',
+            'file'   => env('MY_API_HTTP_HEAD') . 'uploads/ue/files',
         ],
     ],
 
