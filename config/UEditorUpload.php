@@ -45,9 +45,8 @@ return [
         "imageCompressEnable" => true, /* 是否压缩图片,默认是true */
         "imageCompressBorder" => 1600, /* 图片压缩最长边限制 */
         "imageInsertAlign" => "none", /* 插入的图片浮动方式 */
-        "imageUrlPrefix" => env('APP_URL'), /* 图片访问路径前缀 */
-        "imagePathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 为了保证跨域名使用api，这里提供绝对地址 */
-        //"imagePathFormat" => "/uploads/ue/images//{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+        "imageUrlPrefix" => "http://nkncms.nkn.org", /* 图片访问路径前缀 */
+        "imagePathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
         /* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
         /* {rand:6} 会替换成随机数,后面的数字是随机数的位数 */
         /* {time} 会替换成时间戳 */
@@ -64,14 +63,14 @@ return [
         /* 涂鸦图片上传配置项 */
         "scrawlActionName" => "uploadscrawl", /* 执行上传涂鸦的action名称 */
         "scrawlFieldName" => "upfile", /* 提交的图片表单名称 */
-        "scrawlPathFormat" => "/uploads/ue/images//{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+        "scrawlPathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
         "scrawlMaxSize" => 2048000, /* 上传大小限制，单位B */
         "scrawlUrlPrefix" => "", /* 图片访问路径前缀 */
         "scrawlInsertAlign" => "none",
 
         /* 截图工具上传 */
         "snapscreenActionName" => "uploadimage", /* 执行上传截图的action名称 */
-        "snapscreenPathFormat" => "/uploads/ue/images//{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+        "snapscreenPathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
         "snapscreenUrlPrefix" => "", /* 图片访问路径前缀 */
         "snapscreenInsertAlign" => "none", /* 插入的图片浮动方式 */
 
@@ -79,7 +78,7 @@ return [
         "catcherLocalDomain" => ["127.0.0.1", "localhost", "img.baidu.com"],
         "catcherActionName" => "catchimage", /* 执行抓取远程图片的action名称 */
         "catcherFieldName" => "source", /* 提交的图片列表表单名称 */
-        "catcherPathFormat" => "/uploads/ue/images//{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+        "catcherPathFormat" => "/uploads/ue/images/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
         "catcherUrlPrefix" => "", /* 图片访问路径前缀 */
         "catcherMaxSize" => 2048000, /* 上传大小限制，单位B */
         "catcherAllowFiles" => [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 抓取图片格式显示 */
