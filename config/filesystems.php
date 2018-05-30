@@ -67,7 +67,7 @@ return [
             'driver' => 'local',
             'root' => public_path(''),
             'visibility' => 'public',
-            'url' => '',
+            'url' => env('MY_API_HTTP_HEAD'),
         ],
     ],
 
