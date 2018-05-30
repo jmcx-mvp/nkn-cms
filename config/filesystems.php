@@ -67,7 +67,7 @@ return [
             'driver' => 'local',
             'root' => public_path(''),
             'visibility' => 'public',
-            'url' => env('MY_API_HTTP_HEAD'),
+            'url' => env('MY_API_HTTP_HEAD') . 'uploads/ue/',
         ],
     ],
 
